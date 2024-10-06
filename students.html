@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mentorship and Collaboration - Dylan Connor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: black;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 2%;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            width: 125px;
+            height: auto;
+            margin-right: 15px;
+            margin-left: 2%;
+        }
+
+        .navbar-title {
+            color: white;
+            font-size: 22px;
+        }
+
+        .navbar-right {
+            display: flex;
+        }
+
+        .navbar-right a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            margin-left: 20px;
+        }
+
+        .content {
+            padding: 180px 5% 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .content-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .content-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .caption {
+            font-style: italic;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 5%;
+            }
+
+            .navbar-right {
+                margin-top: 10px;
+            }
+
+            .navbar-right a {
+                font-size: 18px;
+                margin-left: 10px;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .content-left, .content-right {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="https://github.com/profconnor/Images/blob/main/210712%20ASU%20Brand%20Guide%20Images%20-%20ASU%20logo%20White%20on%20Black.jpg?raw=true" alt="ASU Logo" class="navbar-logo">
+            <span class="navbar-title">Dylan Connor</span>
+        </div>
+        <div class="navbar-right">
+            <a href="index.html">Home</a>
+            <a href="https://www.dropbox.com/scl/fi/lhsw56s83dccnsg9ax7hy/Dylan-Connor-CV.pdf?rlkey=60nxtqhbzx6sewcrplrajv26h&st=bu5glmo3&dl=1">CV</a>
+            <a href="https://scholar.google.com/citations?user=QXQhGBwAAAAJ&hl=en">Google Scholar</a>
+            <a href="https://casbs.stanford.edu/people/dylan-connor">CASBS</a>
+            <a href="https://search.asu.edu/profile/1887290">SGSUP</a>
+            <a href="#">Students</a>
+            <a href="https://twitter.com/Dylligent">Twitter/X</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="content-left">
+            <h1>Student Mentorship and Collaboration</h1>
+            <p>Working with energetic, interesting, and motivated people is one of the best parts of my job. I've been fortunate to collaborate with many excellent graduate and undergraduate students throughout my career. As a graduate student myself, I was lucky to learn from an exceptional PhD advisor (<a href="https://lboustan.scholar.princeton.edu/">Leah Boustan</a>) and have had excellent senior mentors since becoming a faculty member. These experiences have inspired me to continue the legacy of committed mentorship, helping students explore compelling questions while advancing their careers.</p>
+            <p>My dedication to teaching and mentorship at SGSUP was recognized with the annual Faculty Excellence in Mentorship and Teaching award. Below, you'll find brief descriptions of my students' current projects.</p>
+            <p>My supervision typically focuses on students who address important questions through the construction and analysis of large, complex datasets and the development of quantitative methods. Currently, I'm working with a significant number of students and can only consider new mentees whose interests align closely with my primary research areas (see homepage for details).</p>
+        </div>
+        <div class="content-right">
+            <img src="https://github.com/profconnor/Images/blob/main/AN4A0338.JPG?raw=true" alt="Dylan Connor receiving award">
+            <p class="caption">2023-2024 Award for Faculty Excellence in Mentorship and Teaching</p>
+        </div>
+    </div>
+</body>
+</html>

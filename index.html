@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Connor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: black;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 2%;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            width: 125px;
+            height: auto;
+            margin-right: 15px;
+            margin-left: 2%;
+        }
+
+        .navbar-title {
+            color: white;
+            font-size: 22px;
+        }
+
+        .navbar-right {
+            display: flex;
+        }
+
+        .navbar-right a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            margin-left: 20px;
+        }
+
+        .banner {
+            background-image: url('https://github.com/profconnor/Images/blob/main/USMAPc.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 15%;
+            margin-top: 60px;
+        }
+
+        .banner h1 {
+            font-size: 46px;
+            font-weight: bold;
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            display: flex;
+            padding: 40px 5%;
+            background-color: white;
+        }
+
+        .content-left {
+            flex: 1;
+            padding-right: 20px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .content-left p {
+            margin-bottom: 20px;
+        }
+
+        .content-left p:nth-child(2),
+        .content-left p:nth-child(3) {
+            text-indent: 30px;
+        }
+
+        .content-right {
+            flex: 1;
+        }
+
+        .content-right img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .divider {
+            border-top: 2px solid darkblue;
+            margin: 40px 5%;
+        }
+
+        .recent-research {
+            text-align: center;
+            padding: 40px 5%;
+        }
+
+        .recent-research h2 {
+            font-size: 46px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .research-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .research-gif {
+            width: 66%;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .research-text {
+            width: 66%;
+            text-align: justify;
+            margin: 0 auto;
+        }
+
+        .research-areas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .research-area {
+            width: 45%;
+            margin: 10px;
+            text-align: justify;
+        }
+
+        .research-area img {
+            max-width: 60%;
+            height: auto;
+            margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 40px 5%;
+            background-color: #f8f8f8;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 5%;
+            }
+
+            .navbar-right {
+                margin-top: 10px;
+            }
+
+            .navbar-right a {
+                font-size: 18px;
+                margin-left: 10px;
+            }
+
+            .banner {
+                height: 300px;
+                padding-left: 5%;
+            }
+
+            .banner h1 {
+                font-size: 36px;
+            }
+
+            .banner p {
+                font-size: 18px;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .content-left, .content-right {
+                width: 100%;
+            }
+
+            .research-area {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="https://github.com/profconnor/Images/blob/main/210712%20ASU%20Brand%20Guide%20Images%20-%20ASU%20logo%20White%20on%20Black.jpg?raw=true" alt="ASU Logo" class="navbar-logo">
+            <span class="navbar-title">Dylan Connor</span>
+        </div>
+        <div class="navbar-right">
+            <a href="#">Home</a>
+            <a href="https://www.dropbox.com/scl/fi/lhsw56s83dccnsg9ax7hy/Dylan-Connor-CV.pdf?rlkey=60nxtqhbzx6sewcrplrajv26h&st=bu5glmo3&dl=1">CV</a>
+            <a href="https://scholar.google.com/citations?user=QXQhGBwAAAAJ&hl=en">Google Scholar</a>
+            <a href="https://casbs.stanford.edu/people/dylan-connor">CASBS</a>
+            <a href="https://search.asu.edu/profile/1887290">SGSUP</a>
+            <a href="https://profconnor.github.io/students">Students</a>
+            <a href="https://twitter.com/Dylligent">Twitter/X</a>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <h1>Dylan Connor</h1>
+        <p>CASBS Fellow, Stanford University</p>
+        <p>Professor, Arizona State University</p>
+    </div>
+
+    <div class="content">
+        <div class="content-left">
+            <p>I am a computational social scientist and population geographer. My work examines how places shape human behavior, economic inequality, and population health. I hold appointments as Associate Professor at Arizona State University and as a CASBS Fellow at Stanford University.</p>
+            <p>Today, the United States and Europe face their most pressing population challenges in living memory. Inequality within and across our cities have reached all-time highs, opportunities for our children to climb the economic ladder have sunk to all-time lows, and we will face major immigration and demographic pressures for decades to come.</p>
+            <p>I study the long-term causes and consequences of these conditions in an effort to better understand how we got here and where we are going. My main expertise is in constructing large complex datasets, which I build and analyze through statistical, inferential, and learning frameworks. My work is generally concerned with the spatial dimensions of populations and how they change over time.</p>
+            <p>My findings have been published in leading academic outlets including the Proceedings of the National Academy of Sciences, Scientific Data, Demography, Science Advances, Journal of Economic History and the Annals of the American Association of Geographers. My work has been featured by <a href="https://www.rte.ie/brainstorm/2022/0111/1251020-ireland-children-baby-names-psychology-society/">Ireland's national broadcaster RTE</a>, <a href="https://www.businessinsider.com/us-urban-development-density-last-two-centuries-2020-6">Business Insider</a>, the <a href="https://blogs.lse.ac.uk/usappblog/2024/01/25/growing-up-in-a-left-behind-place-can-have-a-major-impact-on-long-term-income-prospects/">LSE's APP blog</a>, and on <a href="https://www.rte.ie/radio/radio1/clips/22014598/">prime-time radio</a>.</p>
+        </div>
+        <div class="content-right">
+            <img src="https://github.com/profconnor/Images/blob/main/1595123782461.jpg?raw=true" alt="Dylan Connor">
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="recent-research">
+        <h2>Recent Research</h2>
+        <div class="research-content">
+            <img src="https://github.com/profconnor/Images/blob/main/dc-gif.gif?raw=true" alt="Research GIF" class="research-gif">
+            <p class="research-text">My main project for the past five years examines how the long-term regional development of the United States has shaped inequality and social mobility over time and across communities. This work includes a <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2010222117">century-long examination of the US geography of intergenerational mobility</a>, large-scale analysis of the phenomena of <a href="https://academic.oup.com/cjres/article/17/1/37/7286403">'left behind places' in the United States</a>, the <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/psp.2802">changing trajectories of child and place-based poverty in rural America</a>, and, recently, the <a href="https://www.nature.com/articles/s41597-024-03059-9">development of data infrastructure to study spatial wealth inequality</a>.</p>
+        </div>
+        <div class="research-areas">
+            <div class="research-area">
+                <h3>GEOWEALTH-US: Spatial wealth inequality data for the USA</h3>
+                <img src="https://github.com/profconnor/Images/blob/main/Maps_PUMA_90_50_mean.png?raw=true" alt="GEOWEALTH-US">
+                <p>Relying on an ensemble machine-learning-based framework, we have developed the first data infrastructure to study the evolution of spatial wealth dynamics in the United States from 1960 to the present data. We have made the GEOWEALTH-US data <a href="https://www.openicpsr.org/openicpsr/project/192306/version/V4/view;jsessionid=506CF96E4C009451ACC331BD93B759A4">publicly available here</a>.</p>
+            </div>
+            <div class="research-area">
+                <h3>Population health and wellbeing in left behind places</h3>
+                <img src="https://github.com/profconnor/Images/blob/main/F7sKWXrasAA8rZK.jpg?raw=true" alt="Left behind places">
+                <p>This work examines how the changing social and economic dynamics of places in the United States is affecting child wellbeing, educational and economic attainment, and healthy aging (ADRD risk).</p>
+            </div>
+            <div class="research-area">
+                <h3>Census linkage and historical population analysis</h3>
+                <img src="https://github.com/profconnor/Images/blob/main/ED_maps_crop.png?raw=true" alt="Census linkage">
+                <p>With my collaborators in economic history and sociology, I have been answering major historical questions through the development and application of data scientific methods to big historical population data sources. Our work includes analyses of <a href="https://www.cambridge.org/core/journals/journal-of-economic-history/article/abs/cream-of-the-crop-geography-networks-and-irish-migrant-selection-in-the-age-of-mass-migration/7C4F20089343156624FCF09173254B65">US immigration through cross-country record linkage</a>, <a href="https://sociologicalscience.com/articles-v10-27-769/">text-based analysis of immigrants' linguistic assimilation</a>, and <a href="https://www.tandfonline.com/doi/full/10.1080/01615440.2024.2312293">algorithmic innovations in record linkage</a>.</p>
+            </div>
+            <div class="research-area">
+                <h3>Urban spatial data science and climate hazards</h3>
+                <img src="https://github.com/profconnor/Images/blob/main/dev_panel.png?raw=true" alt="Urban spatial data science">
+                <p>Across a range of collaborations, I have worked closely with urban climate researchers and sustainability scholars to improve the data resources for studying urban spatial development for climate-change-related applications. With my colleagues at SPARC, we have written on <a href="https://link.springer.com/article/10.1007/s44212-024-00048-6">Digital Twins in Urban Informatics</a> and developed new data products for assessing <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0269741">flooding</a> and <a href="https://www.sciencedirect.com/science/article/abs/pii/S0143622824000766">wildfire risk</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <p>Get in touch with me at d.c@asu.edu</p>
+    </div>
+</body>
+</html>
