@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Chances Lab | Dylan Connor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fff;
+            color: #444;
+        }
+
+        /* Minimalist Top Navigation */
+        .header-container {
+            max-width: 1100px;
+            margin: 40px auto 20px auto;
+            padding: 0 5%;
+            text-align: center;
+        }
+        .site-title {
+            font-size: 30pt;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .nav-links a {
+            color: #015b59;
+            font-size: 15pt;
+            text-decoration: none;
+            text-transform: lowercase;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section: Perfectly Centered 50/50 Split Layout */
+        .hero-section {
+            display: flex;
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 10%; /* Mirrors the exact margins of the homepage */
+            gap: 60px; /* Precise breathing room between photo and text */
+            align-items: center; /* Perfectly centers the image vertically with the text */
+        }
+        .hero-image {
+            flex: 1; /* Claims exactly 50% of the flexbox */
+            display: flex;
+            justify-content: flex-end; /* Pushes the image neatly toward the center gap */
+        }
+        .hero-image img {
+            width: 100%;
+            max-width: 320px; /* Keeps the photo locked to the same scale as other pages */
+            height: auto;
+            display: block;
+            border-radius: 2px;
+        }
+        .hero-content {
+            flex: 1; /* Claims the other 50% of the flexbox */
+            font-size: 14pt; /* Matches the homepage typography */
+            line-height: 1.6;
+            color: #444;
+            text-align: left;
+        }
+        .hero-content h2 {
+            margin-top: 0;
+            font-size: 14pt;
+            color: #111;
+            letter-spacing: -0.01em;
+            margin-bottom: 15px;
+        }
+        .hero-content h3 {
+            font-size: 14pt;
+            color: #111;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .hero-content p {
+            margin-bottom: 15px;
+        }
+        
+        /* Inline Paragraph Links */
+        p a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        p a:hover {
+            color: #000;
+        }
+
+        /* Divider */
+        .divider {
+            border-top: 1px solid #eaeaea;
+            width: 70%;
+            margin: 60px auto;
+        }
+
+        /* Team & Alumni Section */
+        .team-section {
+            max-width: 1000px;
+            margin: 0 auto 80px auto;
+            padding: 0 10%;
+        }
+        .team-intro {
+            font-size: 12pt; /* Matches global body text size */
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 40px;
+        }
+        .team-intro h3 {
+            font-size: 14pt; /* Restored to proper section header size */
+            color: #111;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: normal;
+            letter-spacing: -0.01em;
+        }
+        .team-intro p {
+            margin-bottom: 20px;
+        }
+        
+        /* Horizontal Student Cards */
+        .student-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .student-card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 25px;
+            background: #ffffff;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .student-photo {
+            flex: 0 0 100px;
+        }
+        .student-photo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Clean circular avatar */
+            object-fit: cover;
+            display: block;
+            background-color: #f9f9f9;
+        }
+        .student-info {
+            flex: 1;
+        }
+        .student-name {
+            font-size: 15pt;
+            font-weight: 600;
+            color: #111;
+            margin: 0 0 5px 0;
+        }
+        .student-role {
+            font-size: 12pt;
+            color: #666;
+            margin: 0 0 10px 0;
+            font-style: italic;
+        }
+        .student-desc {
+            font-size: 12pt;
+            line-height: 1.5;
+            color: #444;
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 13pt;
+            color: #777;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+            margin-top: 80px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: left;
+                gap: 30px;
+            }
+            .hero-image, .hero-content {
+                width: 100%;
+                flex: unset; 
+                justify-content: center;
+            }
+            .hero-image img {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+            .hero-content {
+                text-align: left;
+            }
+            .student-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-container">
+        <div class="site-title">Dylan Connor</div>
+        <nav class="nav-links">
+            <a href="index.html">home</a>
+            <a href="bio.html">bio/cv</a>
+            <a href="lab.html">lab</a>
+            <a href="https://scholar.google.com/citations?user=QXQhGBwAAAAJ&hl=en" target="_blank">scholar</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-image">
+            <img src="https://github.com/profconnor/Images/blob/main/main_crop_1.jpg?raw=true" alt="Dylan Connor">
+        </div>
+        <div class="hero-content">
+            <h2>The Life Chances Lab</h2>
+            <p style="font-size: 12pt">The Life Chances Lab investigates how neighborhoods and regions shape access to wealth, education, and long, healthy, and meaningful lives—what we broadly define as opportunity. Rather than treating opportunity as a static formula, we see it as a dynamic force that flows through places over time. Our core mission is to understand how communities adapt and reinvent themselves to expand life chances across generations.</p>
+            
+            <h2>Core Infrastructure</h2>
+            <p style="font-size: 12pt">To map the long-term geography of life chances, the lab engineers synthetic population microsimulation and GeoAI architectures using large-scale data. Our empirical scope covers multiple continents, spanning from the nineteenth century to the present day. We investigate how places shape human potential across several key dimensions, including upward economic mobility, population health, and resilience to hazards. This work centers on our flagship GEOWEALTH infrastructure, co-led with Tom Kemeny (University of Toronto).</p>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="team-section">
+        <div class="team-intro">
+            <h2>Student Mentorship and Collaboration</h2>
+            <p style="font-size: 12pt">Working with energetic, creative, and motivated scholars is the best part of my work. Having trained under an exceptional mentor in Leah Boustan (Yale University), I strive to provide the same level of rigorous support and guidance to my own graduate and undergraduate collaborators. My commitment to teaching and student success was recognized with the School of Geographical Sciences and Urban Planning (SGSUP) Faculty Excellence in Mentorship and Teaching Award.</p>
+            <p style="font-size: 12pt">We welcome prospective lab members whose research interests align directly with our core priorities.</p>
+        </div>
+
+        <div class="student-list">
+            
+            <div class="student-card">
+                <div class="student-photo">
+                    <img src="https://github.com/profconnor/Images/blob/main/hs_zhining_gu.jpg?raw=true" alt="Zhining Gu">
+                </div>
+                <div class="student-info">
+                    <h4 class="student-name">Zhining Gu</h4>
+                    <p class="student-role">PhD Candidate in Geographical Information Science</p>
+                    <p class="student-desc">Zhining's dissertation is in progress.</p>
+                </div>
+            </div>
+
+            <div class="student-card">
+                <div class="student-photo">
+                    <img src="https://github.com/profconnor/Images/blob/main/hs_nikita_soni.jpeg?raw=true" alt="Nikita Soni">
+                </div>
+                <div class="student-info">
+                    <h4 class="student-name">Nikita Soni</h4>
+                    <p class="student-role">PhD Candidate in Geographical Information Science</p>
+                    <p class="student-desc">Nikita's dissertation is in progress.</p>
+                </div>
+            </div>
+
+            <div class="student-card">
+                <div class="student-photo">
+                    <img src="https://github.com/profconnor/Images/blob/main/hs_jiwon_jang.jpg?raw=true" alt="Jiwon Jang">
+                </div>
+                <div class="student-info">
+                    <h4 class="student-name">Jiwon Jang</h4>
+                    <p class="student-role">PhD Alumni (Graduated 2026) | Placement: University of Toronto, post-doc</p>
+                    <p class="student-desc">Dissertation title: "Where People Cross the Lines: Measuring Neighborhood Connectivity and its Implications for Cognitive Aging"</p>
+                </div>
+            </div>
+
+            <div class="student-card">
+                <div class="student-photo">
+                    <img src="https://github.com/profconnor/Images/blob/main/hs_garima_jain.jpg?raw=true" alt="Garima Jain">
+                </div>
+                <div class="student-info">
+                    <h4 class="student-name">Garima Jain</h4>
+                    <p class="student-role">PhD Alumni (Graduated 2025) | Placement: Stanford University, post-doc; Assistant Professor, University of South Carolina</p>
+                    <p class="student-desc">Dissertation title: "Tangled up in Blue Patterns, drivers, and feedback of aquaculture landscapes and livelihood transitions in coastal India" | 2026 J. Warren Nystrom Award Winner | Co-supervised with Billie Lee Turner II (Arizona State University)</p>
+                </div>
+            </div>
+
+            <div class="student-card">
+                <div class="student-photo">
+                    <img src="https://github.com/profconnor/Images/blob/main/hs_yilei_yu.jpg?raw=true" alt="Yilei Yu">
+                </div>
+                <div class="student-info">
+                    <h4 class="student-name">Yilei Yu</h4>
+                    <p class="student-role">PhD Alumni (Graduated 2025) | Placement: Rice University, post-doc</p>
+                    <p class="student-desc">Dissertation title: "Spatial Data Science for Natural Hazards and the Built Environment"</p>
+                </div>
+            </div>
+
+            <div class="student-card">
+                <div class="student-photo">
+                    <img src="https://github.com/profconnor/Images/blob/main/hs_alex_cliff.jpg?raw=true" alt="Alex Cliff">
+                </div>
+                <div class="student-info">
+                    <h4 class="student-name">Alex Cliff</h4>
+                    <p class="student-role">PhD Alumni (Graduated 2025) | Placement: Industry, GIS Logistics</p>
+                    <p class="student-desc">Dissertation title: "Mapping Flood Resilience: Spatial Data Science, Policy Attention, and the Exposure of Businesses to Flooding in the United States" | Alex was co-supervised with Dr. Sara Meerow (University of Colorado Boulder)</p>
+                </div>
+            </div>
+            
+            <div class="student-card">
+                <div class="student-photo">
+                    <img src="https://github.com/profconnor/Images/blob/main/hs_sarah_bardin.jpg?raw=true" alt="Sarah Bardin">
+                </div>
+                <div class="student-info">
+                    <h4 class="student-name">Sarah Bardin</h4>
+                    <p class="student-role">PhD Alumni (Graduated 2024) | Placement: Mathematica</p>
+                    <p class="student-desc">Dissertation title: "What Works Where: A Spatial Approach to Evidence-based Policymaking" | Sarah was co-supervised with her longer-term mentor Dr. Peter Kedron (University of Santa Barbara).</p>
+                </div>
+            </div>
+            
+            <div class="student-card">
+                <div class="student-photo">
+                    <img src="https://github.com/profconnor/Images/blob/main/hs_siqiao_xie.jpg?raw=true" alt="Siqiao Xie">
+                </div>
+                <div class="student-info">
+                    <h4 class="student-name">Siqiao Xie</h4>
+                    <p class="student-role">PhD Alumni (Graduated 2024) | Placement: University of Colorado Boulder, post-doc</p>
+                    <p class="student-desc">Dissertation title "The Geography of Inequality in STEM: Immigration, Gender, and Economic Disparities in the United States" | Siqiao was co-supervised with Dr. Wei Li (Arizona State University).</p>
+                </div>
+            </div>
+
+            <div class="student-card">
+                <div class="student-photo">
+                    <img src="https://github.com/profconnor/Images/blob/main/hs_alek_berg.jpg?raw=true" alt="Alek Berg">
+                </div>
+                <div class="student-info">
+                    <h4 class="student-name">Alek Berg</h4>
+                    <p class="student-role">MA Alumni (Graduated 2023) | Placement: University of Colorado Boulder, PhD</p>
+                    <p class="student-desc">Thesis title "A High-Resolution Recalculation of the Wildland Urban Interface Reveals over $1 Trillion of California's Residential Structures Are at Risk to Wildfire" | Alek was co-supervised with Dr. Peter Kedron (Arizona State University).</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Dylan Connor. Life Chances Lab, Arizona State University.</p>
+    </footer>
+
+</body>
+</html>

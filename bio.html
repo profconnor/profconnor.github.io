@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio | Dylan Connor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fff;
+            color: #444;
+        }
+
+        /* Minimalist Top Navigation */
+        .header-container {
+            max-width: 1100px;
+            margin: 40px auto 20px auto;
+            padding: 0 5%;
+            text-align: center;
+        }
+        
+        .site-title {
+            font-size: 30pt;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .nav-links a {
+            color: #015b59;
+            font-size: 15pt;
+            text-decoration: none;
+            text-transform: lowercase;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section: Perfectly Centered 50/50 Split Layout */
+        .hero-section {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 10%; /* Mirrors the exact margins of the homepage */
+            gap: 60px; /* Precise breathing room between photo and text */
+            align-items: center; /* Perfectly centers the image vertically with the text */
+        }
+
+        .hero-image {
+            flex: 1; /* Claims exactly 50% of the flexbox */
+            display: flex;
+            justify-content: flex-end; /* Pushes the image neatly toward the center gap */
+        }
+
+        .hero-image img {
+            width: 100%; 
+            max-width: 320px; /* Keeps the photo crisp and scaled properly */
+            height: auto;
+            display: block;
+            border-radius: 2px;
+        }
+
+        .hero-content {
+            flex: 1; /* Claims the other 50% of the flexbox */
+            font-size: 14pt; /* Matches the homepage typography */
+            line-height: 1.6;
+            color: #444;
+            text-align: left;
+        }
+        
+        .hero-content h2 {
+            margin-top: 0;
+            font-size: 14pt;
+            color: #111;
+            letter-spacing: -0.01em;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Inline Paragraph Links */
+        p a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        
+        p a:hover {
+            color: #000;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 13pt;
+            color: #777;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+            margin-top: 80px; /* Adds breathing room before the footer */
+        }
+
+        /* Responsive Mobile Layout */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: left;
+                gap: 30px;
+            }
+            .hero-image, .hero-content {
+                width: 100%;
+                flex: unset; 
+                justify-content: center;
+            }
+            .hero-image img {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+            .hero-content {
+                text-align: left;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-container">
+        <div class="site-title">Dylan Connor</div>
+        <nav class="nav-links">
+            <a href="index.html">home</a>
+            <a href="bio.html">bio/cv</a>
+            <a href="lab.html">lab</a>
+            <a href="https://scholar.google.com/citations?user=QXQhGBwAAAAJ&hl=en" target="_blank">scholar</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-image">
+            <img src="https://github.com/profconnor/Images/blob/main/main_crop_1.jpg?raw=true" alt="Dylan Connor">
+        </div>
+        <div class="hero-content">          
+            <p style="font-size: 11pt"><strong>Dylan Connor</strong> (PhD, UCLA 2017) is an Associate Professor in the School of Geographical Sciences and Urban Planning at Arizona State University, core faculty at the Spatial Analysis Research Center (SPARC), and Director of the Life Chances Lab. In 2024-2025, he was a Fellow at the Center for Advanced Study in the Behavioral Sciences at Stanford University.</p>
+            
+            <p style="font-size: 11pt">As a computational social scientist and geographer, Dr. Connor’s research focuses on the <strong>geography of life chances</strong>—investigating how neighborhoods and regional economies dictate our ability to build wealth, achieve upward mobility, and live long, healthy lives. Rather than taking a static perspective on opportunity, his work explores how communities adapt to shifting economic and social currents over extended historical periods.</p>
+            
+            <p style="font-size: 11pt">To map these long-term spatial dynamics, Dr. Connor and his lab engineer large-scale synthetic population and GeoAI architectures to study the evolving capacities of places to improve life chances. Beyond building foundational data infrastructures like <a href="https://www.geowealthlab.org/" target="_blank">GEOWEALTH</a> (co-led /w Tom Kemeny, University of Toronto), he has published extensively on the changing geography of the American Dream, rural and left-behind places, and the economic history of immigration.</p>
+            
+            <p style="font-size: 11pt">His research has been supported by the National Science Foundation and the National Institutes of Health. Dr. Connor's work informs public policy and discourse, having been cited in the European Commission/OECD report on Inclusive Cities and featured in major outlets such as <em>Brookings</em>, <em>Bloomberg</em>, <em>Business Insider</em>, and <em>Marginal Revolution</em>. He has appeared on the <em>Human Centered</em> podcast in conversation with Nobel Laureate David Card.</p>
+            
+            <p style="font-size: 11pt">► For a complete record of publications and projects, please view his <a href="https://www.dropbox.com/scl/fi/vgoo7lr04cxjclltev6fn/Dylan_Connor_CV_5_page-Online.pdf?rlkey=ylwfdy6bdr28d9ifmgru4h1ak&dl=0" target="_blank">CV</a>.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Dylan Connor. Life Chances Lab, Arizona State University.</p>
+    </footer>
+
+</body>
+</html>
